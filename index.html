@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" class="html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Collection</title>
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./src/css/responsivo.css" />
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <img class="logo" src="./src/images/logo.png" alt="Logo" width="120" />
+      <h1>Anime Collection</h1>
+    </header>
+
+    <main class="container">
+
+      <div id="modal-ganho" class="esconder">
+        <div class="modal-conteudo">
+          <img id="modal-img" src="" alt="Personagem" />
+          <h2 id="modal-nome"></h2>
+          <p id="modal-raridade"></p>
+          <p id="modal-anime"></p>
+          <button onclick="fecharModal()">Fechar</button>
+        </div>
+      </div>
+
+      <div class="filtros">
+        <div class="pesquisa-nome">
+          <input type="text" placeholder="Ex: Sung..." />
+        </div>
+        <div class="pesquisa-anime">
+          <select id="animes">
+            <option value="">Selecione o Anime</option>
+            <option value="solo-leveling">Solo Leveling</option>
+            <option value="demon-slayer">Demon Slayer</option>
+            <option value="death-note">Death Note</option>
+          </select>
+        </div>
+        <div class="pesquisa-raridade">
+          <select id="raridades">
+            <option value="">Selecione uma raridade</option>
+            <option value="comum">Comum</option>
+            <option value="incomum">Incomum</option>
+            <option value="rara">Rara</option>
+            <option value="epica">Épica</option>
+            <option value="lendaria">Lendária</option>
+            <option value="mitica">Mítica</option>
+            <option value="secreta">Secreta</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="roletar">
+        <button id="btn-roletar">Roletar</button>
+      </div>
+      <ul class="personagens">
+        <li
+          class="personagem"
+          data-raridade="mitica"
+          data-nome="sung-jin-woo"
+          data-anime="solo-leveling"
+        >
+          <img src="./src/images/Personagens/sung-jin-woo.jpeg" alt="Sung" />
+          <div class="informacoes">
+            <h2 class="nome-personagem">Sung jin woo</h2>
+            <span class="raridade">Raridade: <span class="valor-categoria">Mítica</span> </span><br />
+            <span class="anime">Anime: Solo Leveling</span>
+          </div>
+        </li>
+
+        <li
+          class="personagem"
+          data-raridade="comum"
+          data-nome="murata"
+          data-anime="demon-slayer"
+        >
+          <img src="./src/images/Personagens/murata.jpg" alt="Murata" />
+          <div class="informacoes">
+            <h2 class="nome-personagem">Murata</h2>
+            <span class="raridade">Raridade: <span class="valor-categoria">Comum</span> </span><br />
+            <span class="anime">Anime: Demon Slayer</span>
+          </div>
+        </li>
+
+        <li
+          class="personagem"
+          data-raridade="epica"
+          data-nome="l"
+          data-anime="death-note"
+        >
+          <img src="./src/images/Personagens/l.jpeg" alt="L" />
+          <div class="informacoes">
+            <h2 class="nome-personagem">L</h2>
+            <span class="raridade">Raridade: <span class="valor-categoria">Épica</span> </span><br />
+            <span class="anime">Anime: Death Note</span>
+          </div>
+        </li>
+        
+      </ul>
+    </main>
+
+    <footer class="rodape">@2025 - Todos os direitos reservados</footer>
+
+    <script src="./src/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.7.4/dist/smooth-scrollbar.js"></script>
+  </body>
+</html>
