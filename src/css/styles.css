@@ -1,0 +1,233 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* bloqueia o scroll nativo */
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgba(0, 0, 0, 0.884);
+  height: 100%;
+  margin: 0;
+}
+
+.cabecalho {
+  background-color: #99190e;
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  margin-bottom: 60px;
+  align-items: center;
+  color: ghostwhite;
+}
+
+.cabecalho img {
+  margin-right: 30px;
+}
+
+.filtros {
+  background-color: rgba(17, 17, 17, 0.884);
+  border-radius: 20px;
+  border-style: double;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.filtros .pesquisa-raridade,
+.filtros .pesquisa-nome,
+.filtros .pesquisa-anime {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.filtros .pesquisa-raridade select,
+.filtros .pesquisa-nome input,
+.filtros .pesquisa-anime select {
+  padding: 16px 13px;
+  border-radius: 2px;
+  border: 2px solid #99190e;
+  background-color: #f2eefa;
+  color: #111111;
+  height: 54px;
+  box-sizing: border-box;
+}
+
+.filtros select {
+  appearance: none;
+  background: url(../images/seta-para-baixo.png) 97% center no-repeat;
+}
+
+.container .personagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 450px; /* Altura fixa para manter consistência */
+}
+
+.container .personagens {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 32px;
+  justify-content: center; /* Alterado de center para flex-start */
+  padding: 0 20px; /* Adicionado padding para não colar nas bordas */
+}
+
+.container .personagens .personagem {
+  max-width: 365px;
+  background-color: #ededed;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgb(0, 0, 0, 0.2);
+}
+
+.container .personagem img {
+  padding: 20px;
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.container .personagem .informacoes {
+  background-color: #99190e;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: center;
+  margin: 5px 0;
+  line-height: 1.4;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container .personagem .informacoes .nome-personagem {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111111;
+}
+
+.container .personagem .informacoes .raridade,
+.container .personagem .informacoes .anime {
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: large;
+}
+
+.personagem[data-raridade="comum"] .valor-categoria {
+  color: #a0a0a0;
+}
+.personagem[data-raridade="incomum"] .valor-categoria {
+  color: #4caf50;
+}
+.personagem[data-raridade="rara"] .valor-categoria {
+  color: #2196f3;
+}
+.personagem[data-raridade="epica"] .valor-categoria {
+  color: #9c27b0;
+}
+.personagem[data-raridade="lendaria"] .valor-categoria {
+  color: #ff9800;
+}
+.personagem[data-raridade="mitica"] .valor-categoria {
+  color: #e91e63;
+}
+.personagem[data-raridade="secreta"] .valor-categoria {
+  color: #ff1100;
+}
+
+.rodape {
+  background-color: #99190e;
+  display: flex;
+  justify-content: center;
+  color: #ededed;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.esconder {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
+.personagem.desconhecida {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+
+.roletar {
+  background-color: rgba(17, 17, 17, 0.884);
+  border-radius: 20px;
+  border-style: double;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  align-items: center;
+  margin-bottom: 10px;
+  color: white;
+  border-color: #000000;
+}
+
+.roletar #btn-roletar {
+  width: 40%;
+  padding: 16px 13px;
+  border-radius: 2px;
+  border: 2px solid #99190e;
+  background-color: #99190e;
+  color: #111111;
+  height: 54px;
+  box-sizing: border-box;
+}
+
+.roletar #btn-roletar:hover {
+  background-color: #6d130b;
+}
+
+#modal-ganho {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-conteudo {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.modal-conteudo img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.modal-conteudo button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #99190e;
+  border: none;
+  color: white;
+  cursor: pointer;
+}

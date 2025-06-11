@@ -1,0 +1,70 @@
+/* responsivo.css */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+
+    .filtros {
+        flex-direction: column;
+        gap: 16px;
+        padding: 15px;
+    }
+
+    .filtros .pesquisa-raridade,
+    .filtros .pesquisa-nome,
+    .filtros .pesquisa-anime {
+        width: 100%;
+    }
+
+    .personagens {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .personagem {
+        width: calc(50% - 10px);
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .cabecalho img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .roletar #btn-roletar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .personagens {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personagem {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .container .personagem img {
+        width: 250px;
+    }
+
+    .filtros select, 
+    .filtros input {
+        padding: 12px 10px;
+        height: 48px;
+    }
+}
+
+
+
